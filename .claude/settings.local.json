@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:redactai.io)",
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(npx create-next-app@14 postpilot-ai --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)"
+    ]
+  }
+}

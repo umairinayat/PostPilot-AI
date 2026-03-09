@@ -268,8 +268,6 @@ export default function AnalyticsPage() {
               <CardContent className="space-y-4">
                 {summary.toneDistribution.length > 0 ? (
                   summary.toneDistribution.map((item) => {
-                    const width = `${(item.count / summary.totalPosts) * 100}%`;
-
                     return (
                       <div key={item.label} className="space-y-2">
                         <div className="flex items-center justify-between text-sm">
@@ -277,7 +275,10 @@ export default function AnalyticsPage() {
                           <span className="text-muted-foreground">{item.count}</span>
                         </div>
                         <div className="h-2 overflow-hidden rounded-full bg-white/[0.06]">
-                          <div className="h-full rounded-full bg-electric-500" style={{ width }} />
+                          <div
+                            className="h-full rounded-full bg-electric-500 transition-all duration-300"
+                            style={{ width: `${(item.count / summary.totalPosts) * 100}%` }}
+                          />
                         </div>
                       </div>
                     );
